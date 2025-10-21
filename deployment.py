@@ -9,7 +9,7 @@ print('Libraries Loaded Successfully')
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Load the model
-model_path = os.path.join(script_dir, "random_forest_model.joblib")
+model_path = os.path.join(script_dir, "rf_forest_model.joblib")
 model = joblib.load(model_path)
 print('Model Loaded Successfully')
 
@@ -27,9 +27,17 @@ st.title("Weather Temperature Predictor")
 st.image(image)
 st.write("Enter weather conditions to predict temperature (°C):")
 with st.expander("Documentation: Input Feature Descriptions"):
-    st.write("**Age**: age in years")
-    st.write("**Sex**: sex; 1 = male, 0 = female")
-
+    st.write("**Year**: Year you want to predict the temperature")
+    st.write("**Month**: Month you want to predict the temperature")
+    st.write("**Day**: Day you want to predict the temperature")
+    st.write("**Time**: The time of the day that you want to predict the temperature(24hours time)")
+    st.write("**Precipitation Type**: The kind of precipitation falling or expected to fall, such as rain, snow, sleet, or hail")
+    st.write("**Humidity**: The relative humidity, representing the amount of water vapor present in the air expressed as a ratio or percentage (0 to 1)")
+    st.write("**Wind Speed**: The rate of air movement measured in kilometers per hour")
+    st.write("**Wind Bearing**: The direction from which the wind is blowing, expressed as an angle in degrees (North, East, South, and West)")
+    st.write("**Visibility**: The greatest distance at which an object can be clearly seen, measured in kilometers")
+    st.write("**Pressure**: The atmospheric pressure or barometric pressure, measured in millibars (mb)")
+     
 # Input Features
 Year = st.number_input("Year", value=2006, step=1)
 Month = st.number_input("Month", min_value=1, max_value=12, step=1)
