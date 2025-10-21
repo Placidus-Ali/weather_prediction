@@ -1,6 +1,7 @@
-# weather_prediction
+## Weather Prediction Project
 
 ![alt text](<weather forecasting.jpg>)
 
 Make your prediction using this link below
+
 https://weatherpredictionproject.streamlit.app/
