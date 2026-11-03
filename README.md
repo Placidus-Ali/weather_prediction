@@ -52,6 +52,7 @@ cd weather_prediction
 
 # Install required dependencies
 pip install pandas numpy matplotlib seaborn scikit-learn jupyter
+```
 
 ## Here is the App
 https://weatherpredictionproject.streamlit.app/
